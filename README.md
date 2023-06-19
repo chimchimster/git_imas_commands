@@ -106,7 +106,7 @@
         Выполните следующие команды:
         <ol>
             <li><code>git log -p</code> - просмотрите логи и найдите тот коммит к которому вы хотите вернуться. Скопируйте hash вашего коммита.</li>
-            <li><code>git </code></li>
+            <li><code>git restore --source=&lt;commit hash&gt; &lt;filename&gt;</code></li>
         </ol>
     </li>
 </ul>
