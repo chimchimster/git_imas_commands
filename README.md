@@ -45,7 +45,7 @@
         <code>git switch &lt;name_of_the_branch&gt;</code> или <code>git checkout &lt;name_of_the_branch&gt;</code><br>
     </li>
     <li>
-        Создать новую ветку можно с помощью команды <code>git branch -c &lt;new_branch_name&gt;</code>;<br>
+        Создать новую ветку можно с помощью команды <code>git branch -c -r origin/&lt;branch_name&gt;</code>;<br>
     </li>
     <li>
         Удалить ветку <code>git branch -d &lt;branch_name&gt;</code>.
