@@ -5,6 +5,7 @@
     <li><a href="#block-1">Создание репозитория</a></li>
     <li><a href="#block-2">Просмотр логов</a></li>
     <li><a href="#block-3">Навигация по веткам</a></li>
+    <li><a href="#block-4">Слияние веток</a></li>
 
 </ol>
 
@@ -47,9 +48,10 @@
         Создать новую ветку можно с помощью команды <code>git branch -c &lt;new_branch_name&gt;</code>;<br>
     </li>
     <li>
-        <i><b>Примечание:</b> Если вы хотите произвести слияние веток используйте: <code>git branch --merge &lt;branch1&gt; &lt;branch2&gt;</code>
-        </i>
+        Удалить ветку <code>git branch -d &lt;branch_name&gt;</code>.
     </li>
 </ul>
+
+<h3 align="center" id="block-4">Слияние веток</h3>
 
 
