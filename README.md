@@ -5,7 +5,9 @@
     <li><a href="#block-1">Создание репозитория</a></li>
     <li><a href="#block-2">Просмотр логов</a></li>
     <li><a href="#block-3">Навигация по веткам</a></li>
-    <li><a href="#block-4">Слияние веток</a></li>
+    <li><a href="#block-4">Добавление/удаление файлов</a></li>
+    <li><a href="#block-5">Отслеживание состояний</a></li>
+    <li><a href="#block-6">Запись в репозиторий</a></li>
 
 </ol>
 
@@ -53,7 +55,42 @@
         Проверить remote ветки можно с помощью команды <code>git branch -a</code>.
     </li>
 </ul>
+<br>
 
-<h3 align="center" id="block-4">Слияние веток</h3>
+<h3 align="center" id="block-4">Добавление/удаление файлов</h3>
+<ul>
+    <li>
+        Добавить файл для отслеживания <code>git add &lt;file_name&gt;</code>;
+    </li>
+    <li>
+        Добавить директорию для отслеживания <code>git add &lt;/dir_name&gt;</code>;
+    </li>
+    <li>
+        Добавить все файлы из директории, в которой вы находитесь <code>git add .</code>;
+    </li>
+    <li>
+        Удалить файлы из отслеживания <code>git reset &lt;file_name&gt;</code>;
+    </li>
+</ul>
+<br>
 
+<h3 align="center" id="block-4">Отслеживание состояний</h3>
+<ul>
+    <li>
+        Текущее состояние <code>git status</code>;
+    </li>
+    <li>
+        Состояние ветки <code>git status -b &lt;branch_name&gt;</code>;
+    </li>
+</ul>
+<br>
 
+<h3 align="center" id="block-4">Запись в репозиторий</h3>
+<ul>
+    <li>
+        Записать все файлы в репозиторий <code>git commit -a -m "commit comment"</code>;
+    </li>
+    <li>
+        
+    </li>
+</ul>
