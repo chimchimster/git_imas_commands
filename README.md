@@ -88,9 +88,9 @@
 <h3 align="center" id="block-4">Запись в репозиторий</h3>
 <ul>
     <li>
-        Записать все файлы в репозиторий <code>git commit -a -m "commit comment"</code>;
+        Записать все файлы в репозиторий с комментарием <code>git commit -a -m "commit comment"</code>;
     </li>
     <li>
-        
+        Записать все файлы в репозиторий без комментария <code>git commit -a</code>;
     </li>
 </ul>
