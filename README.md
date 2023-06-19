@@ -8,6 +8,8 @@
     <li><a href="#block-4">Добавление/удаление файлов</a></li>
     <li><a href="#block-5">Отслеживание состояний</a></li>
     <li><a href="#block-6">Запись в репозиторий</a></li>
+    <li><a href="#block-7">Восстановление состояний</a></li>
+    <li><a href="#block-8">Слияние веток</a></li>
 
 </ol>
 
@@ -74,7 +76,7 @@
 </ul>
 <br>
 
-<h3 align="center" id="block-4">Отслеживание состояний</h3>
+<h3 align="center" id="block-5">Отслеживание состояний</h3>
 <ul>
     <li>
         Текущее состояние <code>git status</code>;
@@ -85,7 +87,7 @@
 </ul>
 <br>
 
-<h3 align="center" id="block-4">Запись в репозиторий</h3>
+<h3 align="center" id="block-6">Запись в репозиторий</h3>
 <ul>
     <li>
         Записать все файлы в репозиторий с комментарием <code>git commit -am "commit comment"</code>;
@@ -97,7 +99,7 @@
 </ul>
 <br>
 
-<h3 align="center" id="block-5">Восстановление состояний</h3>
+<h3 align="center" id="block-7">Восстановление состояний</h3>
 <ul>
     <li>
         Предположим вы воспользовались командой <code>git rm &lt;file.txt&gt;</code>.<br>
@@ -108,5 +110,25 @@
             <li><code>git log -p</code> - просмотрите логи и найдите тот коммит к которому вы хотите вернуться. Скопируйте hash вашего коммита.</li>
             <li><code>git restore --source=&lt;commit hash&gt; &lt;filename&gt;</code></li>
         </ol>
+    </li>
+</ul>
+<br>
+
+<h3 align="center" id="block-8">Слияние веток</h3>
+<ul>
+    <li>
+        Предположим у вас имеется дерево:<br>
+        &nbsp; &nbsp; &nbsp; &nbsp; A - B - C topic<br>
+        &nbsp; &nbsp; &nbsp; &nbsp; /<br>
+        D - E - F - G master
+    </li>
+    <li>
+        Если вы выполните команду <code>git merge topic</code>. Результат будет следующий:<br>
+        &nbsp; &nbsp; &nbsp; &nbsp; A - B - C topic<br>
+        &nbsp; &nbsp; &nbsp; &nbsp; / &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;\<br>
+        D - E - F - G - H master
+    </li>
+    <li>
+        <i><b>Примечание:</b> если вы хотите вернуть прежнее состояние используйте команду <code>git merge --abort</code></i>
     </li>
 </ul>
