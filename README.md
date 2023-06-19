@@ -41,7 +41,7 @@
     </li>
     <li>
         Чтобы сменить текущую ветку используйте команду или 
-        <code>git switch &lt;name_of_the_branch&gt;&lt;name_of_the_branch&gt;</code>;<br>
+        <code>git switch &lt;name_of_the_branch&gt;</code> или <code>git checkout &lt;name_of_the_branch&gt;</code><br>
     </li>
     <li>
         Создать новую ветку можно с помощью команды <code>git branch -c &lt;new_branch_name&gt;</code>;<br>
