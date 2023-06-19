@@ -1,19 +1,19 @@
-<div align="center " style="font-size: 35px; font-weight: 600; background-image: linear-gradient(to left, #3d3d3d, #000000)" id="header">
-    <h2>Основные команды для работы с Git</h2>
-</div>
+<svg fill="none" viewBox="0 0 600 300" width="600" height="300" xmlns="http://www.w3.org/2000/svg">
+  <foreignObject width="100%" height="100%">
+    <div xmlns="http://www.w3.org/1999/xhtml">
+      <style>
+        .container {
+          display: flex;
+          width: 100%;
+          height: 300px;
+          background-color: black;
+          color: white;
+        }
+      </style>
 
-<div>
-
-</div>
-
-<h1>Welcome</h1>
-
-<style>
-h1 {
-    background-image: url(./image.gif);
-    background-size: cover;
-    background-clip: text;
-    -webkit-background-clip: text;
-    color: transparent;
-}
-</style>
+      <div class="container">
+        <h1>Hi there, my name is Nikola 👋</h1>
+      </div>
+    </div>
+  </foreignObject>
+</svg>
