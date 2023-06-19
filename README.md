@@ -48,7 +48,9 @@
         Создать новую ветку можно с помощью команды <code>git branch -c -r origin/&lt;branch_name&gt;</code>;<br>
     </li>
     <li>
-        Удалить ветку <code>git branch -d &lt;branch_name&gt;</code>.
+        Удалить remote ветку <code>git branch -d &lt;branch_name&gt;</code>.<br>
+        Если вам необходимо удалить также ветку на GitHub/GitLab после удаления remote ветки используйте <code>git push origin :&lt;branch_name&gt;</code>.<br>
+        Проверить remote ветки можно с помощью команды <code>git branch -a</code>.
     </li>
 </ul>
 
