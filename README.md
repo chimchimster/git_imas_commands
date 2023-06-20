@@ -136,4 +136,4 @@
 <h4 align=center>Пример слияния</h2>
 <p>Предположим мы находимся в ветке main нашего репозитория.</p>
 <p>Проверим это используя команду <code>git branch -l</code>.</p>
-<img src="./media/git_branch.png" alt="git branch -l">
+<img src="https://github.com/chimchimster/git_imas_commands/blob/main/media/git_branch1.png" alt="git branch -l">
