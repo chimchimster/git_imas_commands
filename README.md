@@ -136,4 +136,7 @@
 <h4 align=center>Пример слияния</h2>
 <p>Предположим мы находимся в ветке main нашего репозитория.</p>
 <p>Проверим это используя команду <code>git branch -l</code>.</p>
-<img src="https://github.com/chimchimster/git_imas_commands/blob/main/media/git_branch1.png" alt="git branch -l">
+<p><img src="https://github.com/chimchimster/git_imas_commands/blob/main/media/git_branch1.png" alt="git branch -l"></p>
+<p>Внутри репозитория находится файл <a href="https://github.com/chimchimster/git_imas_commands/blob/main/text.txt">text.txt</a>. В котором содержится следующая информация:</p>
+<p><img src="https://github.com/chimchimster/git_imas_commands/blob/main/media/git_branch2.png" alt="New Bourne! Shell -> THIS IS MAIN"></p>
+<p>Теперь сменим ветку на new_branch с помощью команды <code>git checkout new_branch</code>.</p>
