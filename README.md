@@ -140,7 +140,15 @@
 <p>Внутри репозитория находится файл <a href="https://github.com/chimchimster/git_imas_commands/blob/main/text.txt">text.txt</a>. В котором содержится следующая информация:</p>
 <p><img src="https://github.com/chimchimster/git_imas_commands/blob/main/media/git_branch2.png" alt="New Bourne! Shell -> THIS IS MAIN"></p>
 <p>Теперь сменим ветку на new_branch с помощью команды <code>git checkout new_branch</code>.</p>
-<p><img src="https://github.com/chimchimster/git_imas_commands/blob/main/media/git_branch2.png" alt="git checkout new_branch"></p>
+<p><img src="https://github.com/chimchimster/git_imas_commands/blob/main/media/git_branch3.png" alt="git checkout new_branch"></p>
 <p>Как видите в том же файле text.txt содержится иная информация. Это приведет к возникновению <b>конфликта</b> во время слияния.</p>
+<p><img src="https://github.com/chimchimster/git_imas_commands/blob/main/media/git_branch4.png" alt="New Bourne! Shell -> THIS IS NEW_BRANCH"></p>
 <p>Давайте попробуем использовать команду, которая соеденит наши репозитории main и new_branch.</p>
-<p>Выполним команду <code>git merge main</code></p>.
+<p>Выполним команду <code>git merge main</code>.</p>
+<p><img src="https://github.com/chimchimster/git_imas_commands/blob/main/media/git_branch5.png" alt="git checkout new_branch"></p>
+<p>Как видите мы получили ожидаемую ошибку слияния веток. Дело в том, что файлы text.txt перед слиянием различались.</p>
+<p>Теперь система контроля версий предлагает нам вручную разрешить конфликты:</p>
+<p><img src="https://github.com/chimchimster/git_imas_commands/blob/main/media/git_branch6.png" alt="конфликты в файле text.txt"></p>
+<p>Git сгенерировал новые данные. Символы <<<<<<< указывают на ветку, а разделители ======== отделяют код одной ветки от другой.</p>
+<p>Удалите ненужный код и выполните коммит <code>git commit -am "your comment"</code>.</p>
+<p>Поздравляю! Вы только что выполнили слияние веток.</p>
