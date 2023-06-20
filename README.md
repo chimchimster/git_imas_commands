@@ -140,3 +140,7 @@
 <p>Внутри репозитория находится файл <a href="https://github.com/chimchimster/git_imas_commands/blob/main/text.txt">text.txt</a>. В котором содержится следующая информация:</p>
 <p><img src="https://github.com/chimchimster/git_imas_commands/blob/main/media/git_branch2.png" alt="New Bourne! Shell -> THIS IS MAIN"></p>
 <p>Теперь сменим ветку на new_branch с помощью команды <code>git checkout new_branch</code>.</p>
+<p><img src="https://github.com/chimchimster/git_imas_commands/blob/main/media/git_branch2.png" alt="git checkout new_branch"></p>
+<p>Как видите в том же файле text.txt содержится иная информация. Это приведет к возникновению <b>конфликта</b> во время слияния.</p>
+<p>Давайте попробуем использовать команду, которая соеденит наши репозитории main и new_branch.</p>
+<p>Выполним команду <code>git merge main</code></p>.
