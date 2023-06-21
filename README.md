@@ -2,6 +2,11 @@
 
 <h3>Оглавление</h3>
 <ol>
+    <li><a href="#settings-1">Настройка SSH-подключения к GitLab</a></li>
+</ol>
+
+<h4>Базовые команды</h4>
+<ol>
     <li><a href="#block-1">Создание репозитория</a></li>
     <li><a href="#block-2">Просмотр логов</a></li>
     <li><a href="#block-3">Навигация по веткам</a></li>
@@ -14,6 +19,52 @@
     <li><a href="#block-10">Система тегов</a></li>
 
 </ol>
+
+<h3 align="center" id="settings-1">Настройка SSH-подключения к GitLab</h3>
+<ul>
+    <li>
+        Откройте терминал и выполните команду <code>ssh-keygen -t ed25519 -C &lt;your_email&gt;</code>;
+    </li>
+    <li>
+        Пройдите все стадии генерации ключа. Для сохранения ключей используйте директорию по умолчанию <code>/home/user/.ssh/id_ed25519</code>;
+    </li>
+    <li>
+        Перейдите в директорию <code>~/.ssh</code>
+    </li>
+    <li>
+        Выполните команду <code>nano config</code>;
+    </li>
+    <li>
+        Сохраните строки в файл:<br>
+        <code>Host gitlab.imas.kz<br>
+        &nbsp;&nbsp;&nbsp;&nbsp;PreferredAuthentications publickey<br>
+        &nbsp;&nbsp;&nbsp;&nbsp;IdentityFile ~/.ssh/id_ed25519.pub</code>
+    </li>
+    <li>
+        Находясь в дириктории <code>~/.ssh</code> измените права доступа к файлам:<br>
+        <code>sudo chmod 600 config</code>;<br>
+        <code>sudo chmod 600 id_ed25519</code>;<br>
+        <code>sudo chmod 600 id_ed25519.pub</code>;<br>
+        <code>sudo chmod 700 known_hosts</code>.
+    </li>
+    <li>
+        Перейдите и авторизуйтесь на <code>gitlab.imas.kz</code>.<br> 
+        <code>Ваш профиль</code> -> <code>Edit profile</code> -> в поле <code>SSH Keys</code> вставьте ваш публичный ключ.
+        Настройте параметры ключа (title, usage type, expiration date) -> нажмите <code>Add key</code>;
+    </li>
+    <li>
+        Проверьте правильность настройки, выполнив команду:<br>
+        <code>ssh -T git@gitlab.imas.kz</code>;
+    </li>
+    <li>
+        Введите фразу, которую вы указывали при генерации ключа.<br>
+        Вы должны будете увидеть следующий вывод:<br>
+        <code>Welcome to GitLab, @&lt;yourname&gt;</code>
+    </li>
+</ul>
+
+
+
 
 <h3 align="center" id="block-1">Создание репозитория</h3>
 
