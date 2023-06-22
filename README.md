@@ -61,6 +61,9 @@
         Вы должны будете увидеть следующий вывод:<br>
         <code>Welcome to GitLab, @&lt;yourname&gt;</code>
     </li>
+    <li>
+        Теперь чтобы выполнять команды вам достаточно выполнить команду <code>git remote set-url origin git@gitlab.com:&lt;your_repo&gt;.git</code>;
+    </li>
 </ul>
 
 
@@ -224,5 +227,13 @@
     </li>
     <li>
         Как только вы готовы применить архивные изменения используйте команду <code>git stash pop</code>, если вы хотите очистить архив, в противном случае воспользуйтесь <code>git stash apply</code>.
+    </li>
+</ul>
+<br>
+
+<h3 align="center" id="block-10">Система тегов</h3>
+<ul>
+    <li>
+        
     </li>
 </ul>
