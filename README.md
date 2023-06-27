@@ -25,7 +25,7 @@
 
 <h4>Практики внедрения</h4>
 <ol>
-    <li><a href="#practice-1">Правила ветвления для компании iMAS</a></li>
+    <li><a href="#practice-1">Общие правила GitLab компании iMAS</a></li>
 </ol>
 
 
@@ -308,19 +308,111 @@
 </ul>
 <br>
 
-<h3 align="center" id="practice-1">Правила ветвления для компании iMAS.</h3>
+<h3 align="center" id="practice-1">Общие правила GitLab компании iMAS</h3>
 <ol>
     <li>
-        Стабильный код должен находится в ветке <code>master</code>; 
+        <ul>
+            <b>Стабильная версия кода</b> должна находится в ветке <code>master</code>;
+            <li>
+                Параллельные ветки должны называться &lt;feature_name&gt;_&lt;developer_name&gt;;
+            </li>
+            <li>
+                Прежде чем произвести слияние параллельных веток в основную, создается ветка &lt;project_name&gt;_&lt;test&gt;;
+                Все изменения в порядке очереди сливаются в тестовую ветку. На данном этапе проект тестируется.
+            </li>
+            <li>
+                Если все благополучно протестировано, тестовая ветка сливается с <code>master</code> и код деплоится.
+            </li>
+        </ul>
     </li>
     <li>
-        Параллельные ветки должны называться &lt;feature_name&gt;_&lt;developer_name&gt;;
-    </li>
-    <li>
-        Прежде чем произвести слияние параллельных веток в основную, создается ветка &lt;project_name&gt;_&lt;test&gt;;
-        Все изменения в порядке очереди сливаются в тестовую ветку. На данном этапе проект тестируется.
-    </li>
-    <li>
-        Если все благополучно протестировано, тестовая ветка сливается с <code>master</code> и код деплоится.
+        <ul>
+            <b>Форматирование коммитов</b> должно сопровождаться следующим сценарием:<br>
+            <code>
+                &lt;type&gt;(&lt;scope&gt;): &lt;subject&gt;<br>
+                &nbsp;&nbsp;&nbsp;&nbsp;&lt;BLANK LINE&gt;<br>
+                &nbsp;&nbsp;&nbsp;&nbsp;&lt;body&gt;<br>
+                &nbsp;&nbsp;&nbsp;&nbsp;&lt;BLANK LINE&gt;<br>
+                &lt;footer&gt;<br>
+            </code>
+            <li>
+                <b>Допустимые типы (type)</b>:
+                <ul>
+                    <li>
+                        <i>feat</i> - feature;
+                    </li>
+                    <li>
+                        <i>fix</i> - bug fix;
+                    </li>
+                    <li>
+                        <i>docs</i> - documentation;
+                    </li>
+                    <li>
+                        <i>style</i> - formatting;
+                    </li>
+                    <li>
+                        <i>tests</i> - adding new tests;
+                    </li>
+                    <li>
+                        <i>chore</i> - maintenance;
+                    </li>
+                </ul>
+            </li>
+            <li>
+                <b>Допустимые области (scopes)</b>:
+                <ul>
+                    <li>
+                        Отмечайте те места, в области которых был произведен коммит. К примеру, <b>$views, $models, $static, $rootSettings</b>.
+                        Если полей много то используйте символ: <b>*</b>.
+                    </li>
+                </ul>
+            </li>
+            <li>
+                <b>Тема коммита (subject)</b>:
+                <ul>
+                    <li>
+                        При написании темы коммита используйте императивные конструкции в настоящем времени.
+                        Например, <code>change</code> <s><code>changed</code></s>, <code>add</code> <s><code>added</code></s>.
+                        Не используйте заглавные буквы в начале предложения!
+                    </li>
+                </ul>
+            </li>
+            <li>
+                <b>Тело коммита (body)</b>:
+                <ul>
+                    <li>
+                        Тело коммита должно содержать минимум 2 строки. 
+                        Одна строка (менее 50 символов) кратко отражает действия коммита.
+                        Содержание второй строки явно указывает на то, какие изменения были произведены.
+                        Не используйте заглавные буквы в начале предложения!
+                    </li>
+                </ul>
+            </li>
+            <li>
+                <b>Футер коммита (footer)</b>:
+                <ul>
+                    <li>
+                        Все <b>КРИТИЧЕСКИЕ</b> изменения должны быть отражены в футере коммита. 
+                    </li>
+                    <li>
+                        Например, <code>BREAKING CHANGE: change table name in database.<br>
+                        before: temp_posts<br>
+                        after: temp_posts_new<br>
+                        </code>
+                    </li>
+                </ul>
+            </li>
+            <li>
+                <b>Пример коммита</b>:<br>
+                <code>
+                    feat($static/table.js): add schedule tag metrics<br>
+                    <br>
+                    create new schedule in front-end part<br>
+                    1. function schedule_tag change - it displays new metrics;<br>
+                    <br>
+                    BREAKING CHANGE: change styles in static/styles.css
+                </code>
+            </li>
+        </ul>
     </li>
 </ol>
